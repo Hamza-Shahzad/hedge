@@ -1,0 +1,63 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-hack2020-dev-152432-authRole",
+      "UnauthRoleArn": "arn:aws:iam::342554357511:role/amplify-hack2020-dev-152432-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::342554357511:role/amplify-hack2020-dev-152432-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-hack2020-dev-152432-deployment",
+      "UnauthRoleName": "amplify-hack2020-dev-152432-unauthRole",
+      "StackName": "amplify-hack2020-dev-152432",
+      "StackId": "arn:aws:cloudformation:us-east-1:342554357511:stack/amplify-hack2020-dev-152432/0cb3d720-416f-11eb-8d7a-12fc0b61e9db",
+      "AmplifyAppId": "dsm6w34yjno2j"
+    }
+  },
+  "auth": {
+    "hack20201fc37862": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-hack2020-dev-152432-deployment/amplify-cfn-templates/auth/hack20201fc37862-cloudformation-template.yml",
+        "logicalId": "authhack20201fc37862"
+      },
+      "lastPushTimeStamp": "2020-12-18T21:20:18.377Z",
+      "output": {
+        "AppClientSecret": "1ii3sv0cb94r9vq5qjar5m30kpekjqqu4u2jvf8fd7ut5rospa7k",
+        "UserPoolId": "us-east-1_YTMaYISXr",
+        "AppClientIDWeb": "133cr1o6pdjlno5ttkc8j7q5sd",
+        "AppClientID": "7v3s8qfdfp5ae6igkl066fcmbc",
+        "IdentityPoolId": "us-east-1:f23c952c-5099-41fe-a9ba-9d281ddccc88",
+        "IdentityPoolName": "hack20201fc37862_identitypool_1fc37862__dev",
+        "UserPoolName": "hack20201fc37862_userpool_1fc37862"
+      },
+      "lastPushDirHash": "Mcu43t66lEzyESiv5ObgB+EvHMw="
+    },
+    "userPoolGroups": {
+      "service": "Cognito-UserPool-Groups",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "hack20201fc37862",
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb",
+            "AppClientID",
+            "IdentityPoolId"
+          ]
+        }
+      ],
+      "lastPushTimeStamp": "2020-12-18T21:20:18.386Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-hack2020-dev-152432-deployment/amplify-cfn-templates/auth/template.json",
+        "logicalId": "authuserPoolGroups"
+      },
+      "output": {
+        "hackGroupingGroupRole": "arn:aws:iam::342554357511:role/us-east-1_YTMaYISXr-hackGroupingGroupRole"
+      },
+      "lastPushDirHash": "Jid2R1V4zNFcktOMrUBweD2hnPY="
+    }
+  }
+}
