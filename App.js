@@ -4,8 +4,8 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 import Amplify, { Auth } from 'aws-amplify';
 import awsconfig from './aws-exports';
 import {withAuthenticator} from 'aws-amplify-react-native';
-import Routes from './Routes.js'
-import Purchase from './purchase';
+import {TextInput} from 'react-native';
+
 
 
 Amplify.configure(awsconfig)
@@ -21,8 +21,8 @@ async function signOut(){
 
 }
 
-
 function App() {
+  const [value, onChangeText] = React.useState('158');
   return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
@@ -30,7 +30,12 @@ function App() {
 
       <Button title="Sign out" onPress={()=> signOut()} />
 
-      <Routes />
+      <Text>Buy Some Amazon Stock!</Text>
+      <TextInput 
+         style={{ height: 40, borderColor: 'gray', borderWidth: 1}}
+         onChangeText={text => onchangeText(text)}
+         value={value}/>
+      
     </View>
   );
 }
