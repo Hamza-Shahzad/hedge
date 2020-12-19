@@ -4,6 +4,8 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 import Amplify, { Auth } from 'aws-amplify';
 import awsconfig from './aws-exports';
 import {withAuthenticator} from 'aws-amplify-react-native';
+import Routes from './Routes.js'
+import Purchase from './purchase';
 
 
 Amplify.configure(awsconfig)
@@ -27,6 +29,8 @@ function App() {
       <StatusBar style="auto" />
 
       <Button title="Sign out" onPress={()=> signOut()} />
+
+      <Routes />
     </View>
   );
 }
