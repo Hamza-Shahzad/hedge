@@ -1,13 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {Component} from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
-import Amplify, { Auth } from 'aws-amplify';
+import Amplify, { Auth, API } from 'aws-amplify';
 import awsconfig from './aws-exports';
 import {withAuthenticator} from 'aws-amplify-react-native';
 import {TextInput} from 'react-native';
+import aws_exports from './aws-exports';
 
-
-
+Amplify.configure(aws_exports);
 Amplify.configure(awsconfig)
 
 async function signOut(){
@@ -21,7 +21,18 @@ async function signOut(){
 
 }
 
+var state = { apiResponse: null };
+
+async function getSample() {
+ const path = "/items"; // you can specify the path
+  const apiResponse = await API.get("sampleCloudApi" , path); //replace the API name
+  console.log('response:' + apiResponse);
+  this.setState({ apiResponse });
+}
+
+
 function App() {
+  
   const [value, onChangeText] = React.useState('158');
   return (
     <View style={styles.container}>
@@ -31,6 +42,14 @@ function App() {
       <Button title="Sign out" onPress={()=> signOut()} />
 
       <Text>Buy Some Amazon Stock!</Text>
+
+
+          <View>
+          <Button title="Send Request" onPress={getSample.bind(this)} />
+          <Text>Response: {state.apiResponse && JSON.stringify(state.apiResponse)}</Text>
+        </View>
+
+
       <TextInput 
          style={{ height: 40, borderColor: 'gray', borderWidth: 1}}
          onChangeText={text => onchangeText(text)}

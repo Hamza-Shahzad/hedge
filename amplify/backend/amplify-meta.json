@@ -18,11 +18,6 @@
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
       "customAuth": false,
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-hack2020-dev-152432-deployment/amplify-cfn-templates/auth/hack20201fc37862-cloudformation-template.yml",
-        "logicalId": "authhack20201fc37862"
-      },
-      "lastPushTimeStamp": "2020-12-18T21:20:18.377Z",
       "output": {
         "AppClientSecret": "1ii3sv0cb94r9vq5qjar5m30kpekjqqu4u2jvf8fd7ut5rospa7k",
         "UserPoolId": "us-east-1_YTMaYISXr",
@@ -32,7 +27,11 @@
         "IdentityPoolName": "hack20201fc37862_identitypool_1fc37862__dev",
         "UserPoolName": "hack20201fc37862_userpool_1fc37862"
       },
-      "lastPushDirHash": "Mcu43t66lEzyESiv5ObgB+EvHMw="
+      "lastPushTimeStamp": "2020-12-19T04:54:44.135Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-hack2020-dev-152432-deployment/amplify-cfn-templates/auth/hack20201fc37862-cloudformation-template.yml",
+        "logicalId": "authhack20201fc37862"
+      }
     },
     "userPoolGroups": {
       "service": "Cognito-UserPool-Groups",
@@ -49,15 +48,43 @@
           ]
         }
       ],
-      "lastPushTimeStamp": "2020-12-18T21:20:18.386Z",
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-hack2020-dev-152432-deployment/amplify-cfn-templates/auth/template.json",
-        "logicalId": "authuserPoolGroups"
-      },
       "output": {
         "hackGroupingGroupRole": "arn:aws:iam::342554357511:role/us-east-1_YTMaYISXr-hackGroupingGroupRole"
       },
-      "lastPushDirHash": "Jid2R1V4zNFcktOMrUBweD2hnPY="
+      "lastPushTimeStamp": "2020-12-19T04:54:44.138Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-hack2020-dev-152432-deployment/amplify-cfn-templates/auth/template.json",
+        "logicalId": "authuserPoolGroups"
+      }
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "type": "cicd",
+      "lastPushTimeStamp": "2020-12-19T04:39:56.627Z"
+    }
+  },
+  "function": {
+    "helloWorld": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2020-12-19T04:53:41.439Z",
+      "lastPackageTimeStamp": "2020-12-19T04:53:41.476Z",
+      "distZipFilename": "helloWorld-33572b7a763365693059-build.zip",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-hack2020-dev-152432-deployment/amplify-cfn-templates/function/helloWorld-cloudformation-template.json",
+        "logicalId": "functionhelloWorld"
+      },
+      "lastPushTimeStamp": "2020-12-19T04:54:44.146Z",
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:342554357511:function:helloWorld-dev",
+        "Name": "helloWorld-dev",
+        "LambdaExecutionRole": "hack2020LambdaRoled4ead5e4-dev"
+      },
+      "lastPushDirHash": "4o1SW5FLe/N34PcXpBn2cKaKTQg="
     }
   }
 }

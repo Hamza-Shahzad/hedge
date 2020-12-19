@@ -1,20 +1,27 @@
 {
-  "dev": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-hack2020-dev-152432-authRole",
-      "UnauthRoleArn": "arn:aws:iam::342554357511:role/amplify-hack2020-dev-152432-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::342554357511:role/amplify-hack2020-dev-152432-authRole",
-      "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-hack2020-dev-152432-deployment",
-      "UnauthRoleName": "amplify-hack2020-dev-152432-unauthRole",
-      "StackName": "amplify-hack2020-dev-152432",
-      "StackId": "arn:aws:cloudformation:us-east-1:342554357511:stack/amplify-hack2020-dev-152432/0cb3d720-416f-11eb-8d7a-12fc0b61e9db",
-      "AmplifyAppId": "dsm6w34yjno2j"
-    },
-    "categories": {
-      "auth": {
-        "hack20201fc37862": {}
-      }
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-hack2020-dev-152432-authRole",
+            "UnauthRoleArn": "arn:aws:iam::342554357511:role/amplify-hack2020-dev-152432-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::342554357511:role/amplify-hack2020-dev-152432-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-hack2020-dev-152432-deployment",
+            "UnauthRoleName": "amplify-hack2020-dev-152432-unauthRole",
+            "StackName": "amplify-hack2020-dev-152432",
+            "StackId": "arn:aws:cloudformation:us-east-1:342554357511:stack/amplify-hack2020-dev-152432/0cb3d720-416f-11eb-8d7a-12fc0b61e9db",
+            "AmplifyAppId": "dsm6w34yjno2j"
+        },
+        "categories": {
+            "auth": {
+                "hack20201fc37862": {},
+                "userPoolGroups": {}
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "dsm6w34yjno2j",
+                    "type": "cicd"
+                }
+            }
+        }
     }
-  }
 }

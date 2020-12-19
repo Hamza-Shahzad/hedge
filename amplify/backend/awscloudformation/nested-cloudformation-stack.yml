@@ -164,6 +164,15 @@
         }
       }
     },
+    "functionhelloWorld": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-hack2020-dev-152432-deployment/amplify-cfn-templates/function/helloWorld-cloudformation-template.json",
+        "Parameters": {
+          "env": "dev"
+        }
+      }
+    },
     "UpdateRolesWithIDPFunction": {
       "DependsOn": [
         "AuthRole",
